@@ -11,5 +11,9 @@ app.use(cors({
     origin: '*'
 }))
 
+app.get('/', (req, res) => {
+    res.status(200).json({ msg: 'Welcome to Express' });
+})
+
 const server = http.createServer(app);
 server.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
